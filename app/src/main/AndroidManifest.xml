@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.karamoff.ffsourcecode" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Code"
+            android:label="@string/title_activity_code"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.karamoff.ffsourcecode.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WYSIWYG"
+            android:label="@string/title_activity_wysiwyg"
+            android:parentActivityName=".Code" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.karamoff.ffsourcecode.Code" />
+        </activity>
+    </application>
+
+</manifest>
